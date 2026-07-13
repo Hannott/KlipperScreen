@@ -1027,10 +1027,10 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-msgid "Raise Nozzle"
+msgid "Lower Bed"
 msgstr ""
 
-msgid "Lower Nozzle"
+msgid "Raise Bed"
 msgstr ""
 
 msgid "Abort"

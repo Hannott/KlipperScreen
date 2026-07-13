@@ -80,8 +80,8 @@ class Panel(ScreenPanel):
                 label.set_ellipsize(Pango.EllipsizeMode.END)
 
         self.buttons = {
-            "zpos": self._gtk.Button("z-farther", _("Raise Nozzle"), "color4"),
-            "zneg": self._gtk.Button("z-closer", _("Lower Nozzle"), "color1"),
+            "zpos": self._gtk.Button("z-closer", _("Lower Bed"), "color4"),
+            "zneg": self._gtk.Button("z-farther", _("Raise Bed"), "color1"),
             "start": self._gtk.Button("resume", _("Start"), "color3"),
             "complete": self._gtk.Button("complete", _("Accept"), "color3"),
             "cancel": self._gtk.Button("cancel", _("Abort"), "color2"),
@@ -131,9 +131,9 @@ class Panel(ScreenPanel):
         grid = Gtk.Grid(column_homogeneous=True)
         if self._screen.vertical_mode:
             zpos_row, zneg_row = (
-                (2, 1)
+                (1, 2)
                 if self._config.get_config()["main"].getboolean("invert_z", False)
-                else (1, 2)
+                else (2, 1)
             )
             grid.attach(self.buttons["zpos"], 0, zpos_row, 1, 1)
             grid.attach(self.buttons["zneg"], 0, zneg_row, 1, 1)
@@ -144,9 +144,9 @@ class Panel(ScreenPanel):
             grid.attach(distances, 0, 3, 2, 1)
         else:
             zpos_row, zneg_row = (
-                (1, 0)
+                (0, 1)
                 if self._config.get_config()["main"].getboolean("invert_z", False)
-                else (0, 1)
+                else (1, 0)
             )
             grid.attach(self.buttons["zpos"], 0, zpos_row, 1, 1)
             grid.attach(self.buttons["zneg"], 0, zneg_row, 1, 1)

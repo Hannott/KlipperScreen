@@ -9,7 +9,7 @@ It's strongly suggested to read Klipper documentation about [Bed level](https://
 * "Start" will initiate the only method available, or ask the user if multiple methods are available.
 !!! note
     KlipperScreen will automatically Home(`G28`) if needed
-* The raise(+) and lower(-) buttons send `TESTZ Z=distance` where distance is selected in the bottom row.
+* The Lower Bed(+) and Raise Bed(-) buttons send `TESTZ Z=distance` where distance is selected in the bottom row. On this printer the bed moves instead of the nozzle: positive Z lowers the bed (increases nozzle-to-bed gap) and negative Z raises the bed (decreases nozzle-to-bed gap).
 * Accept will send `ACCEPT`
 * Abort will send `ABORT`
 

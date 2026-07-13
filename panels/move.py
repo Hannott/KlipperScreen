@@ -99,8 +99,8 @@ class Panel(ScreenPanel):
             grid.attach(self.buttons[xp], 2, 1, 1, 1)
             grid.attach(self.buttons[ym], 1, 1, 1, 1)
             grid.attach(self.buttons[yp], 1, 0, 1, 1)
-            grid.attach(self.buttons[zm], 3, 1, 1, 1)
-            grid.attach(self.buttons[zp], 3, 0, 1, 1)
+            grid.attach(self.buttons[zm], 3, 0, 1, 1)
+            grid.attach(self.buttons[zp], 3, 1, 1, 1)
 
         grid.attach(self.buttons["home"], 0, 0, 1, 1)
 
